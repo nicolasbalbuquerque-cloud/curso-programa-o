@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC Moderna</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+</head>
+<body>
+
+    <main class="calculadora-container">
+        <header>
+            <h1>Calculadora de IMC</h1>
+            <p>Descubra se o seu peso está na faixa ideal</p>
+        </header>
+
+        <form id="imc-form" onsubmit="event.preventDefault();">
+            <div class="grupo-input">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" step="0.1" placeholder="Ex: 75.5" required>
+            </div>
+
+            <div class="grupo-input">
+                <label for="altura">Altura (m):</label>
+                <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75" required>
+            </div>
+
+            <button type="button" id="btn-calcular">Calcular IMC</button>
+        </form>
+
+        <section id="painel-resultado" class="resultado-container oculto">
+            <div class="card-resultado">
+                <h3>Seu IMC é:</h3>
+                <p id="valor-imc" class="destaque-imc">0.00</p>
+            </div>
+            <div class="card-resultado">
+                <h3>Classificação:</h3>
+                <p id="classificacao-imc" class="destaque-classificacao">-</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

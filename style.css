@@ -1,0 +1,142 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0B0B0C;
+    color: #E2E8F0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Centralizador */
+.calculadora-container {
+    background-color: #121214;
+    border: 1px solid #232329;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #FF6B00;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #94A3B8;
+    font-size: 0.9rem;
+}
+
+/* Inputs e Elementos do Formulário */
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.grupo-input input {
+    background-color: #1A1A1E;
+    border: 1px solid #232329;
+    color: #FFFFFF;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #FF6B00;
+}
+
+/* Botão Laranja Elétrico */
+button {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #E05E00;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Painel de Resultados */
+.resultado-container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    animation: surgimento 0.4s ease forwards;
+}
+
+.card-resultado {
+    background-color: #1A1A1E;
+    border: 1px solid #232329;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card-resultado h3 {
+    font-size: 0.8rem;
+    color: #94A3B8;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.destaque-imc {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.destaque-classificacao {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #FF8533;
+}
+
+/* Classes Auxiliares de Controle */
+.oculto {
+    display: none;
+}
+
+@keyframes surgimento {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
